@@ -4,10 +4,11 @@ import models.Task
 import play.api.mvc._
 import play.api.data.Form
 import play.api.data.Forms._
+import controllers.custom.LoggingAction
 
 object Application extends Controller {
 
-  def index = Action {
+  def index = LoggingAction {
     Redirect(routes.Application.tasks)
   }
 
